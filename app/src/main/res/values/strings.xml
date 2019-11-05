@@ -1,6 +1,15 @@
 <resources>
+    <!-- Main (Start) Activity -->
     <string name="app_name">up887818</string>
     <string name="title">My First Week at a Fast Food Restaurant</string>
     <string name="MainActivity_Intro">Type in your name to get started!</string>
     <string name="title_activity_introduction">Introduction</string>
+
+    <!-- Introduction Activity -->
+    <string-array name="intro_explaination">
+        <item>Hi %s! I\'m Scott and I am your supervisor here at Fast Food.</item>
+        <item>You start work on Monday and have a week probationary period.</item>
+        <item>Each day you will take responsibility for the hygiene of the restaurant as well as serve customers.</item>
+        <item>If you mess up, you may have to go back to your previous work... or worse, you could get fired!</item>
+    </string-array>
 </resources>
