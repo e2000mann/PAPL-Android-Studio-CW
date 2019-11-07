@@ -1,6 +1,7 @@
 package com.example.up887818;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,9 +25,9 @@ public class Fired extends AppCompatActivity {
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Goes back to main activity
-                Intent restart = new Intent(Fired.this, MainActivity.class);
-                startActivity(restart);
+                //Goes back to main activity, closing all other activities.
+                //Todo: (note to self) use navigateUpTo instead of startactivity when going backwards
+                navigateUpTo(new Intent(Fired.this, MainActivity.class));
             }
         });
 
@@ -35,7 +36,7 @@ public class Fired extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Exits App
-                finish();
+                finishAffinity();
                 System.exit(0);
             }
         });

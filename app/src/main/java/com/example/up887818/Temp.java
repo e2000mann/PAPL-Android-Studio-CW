@@ -17,11 +17,14 @@ public class Temp extends AppCompatActivity {
 
     //Declaring this outside of the onCreate() method means I can access it in the onClick() method,
     //Without needing to declare it final.
-    TextView goodMorning = findViewById(R.id.goodMorning);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TextView goodMorning = findViewById(R.id.textView2);
+
         setContentView(R.layout.activity_temp);
 
         //Todo: Create All Task Activities
@@ -57,6 +60,7 @@ public class Temp extends AppCompatActivity {
                     startActivity(fired);
                 }
                 else{
+                    TextView goodMorning = findViewById(R.id.textView2);
                     goodMorning.setText("Scott has requested that you go to work. If you refuse again you will be fired!");
                 }
             }

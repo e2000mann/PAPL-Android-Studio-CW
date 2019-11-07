@@ -14,40 +14,53 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/manager" />
+
         <TextView
             android:id="@+id/firedMessage"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
             android:text="You've been fired!" />
 
         <TextView
             android:id="@+id/firedReason"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
             android:text="TextView" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="0.5"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/yesButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
                 android:text="Restart" />
 
             <Button
                 android:id="@+id/noButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
                 android:text="Quit" />
         </LinearLayout>
 
