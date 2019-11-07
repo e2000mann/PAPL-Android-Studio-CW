@@ -29,7 +29,7 @@ public class Introduction extends AppCompatActivity {
             int counter = 0;
             @Override
             public void onClick(View v){
-                if (counter < 4) {
+                if (counter < 3) {
                     counter++;
                     test.setText(strings[counter]);
                     if (counter == 3) {

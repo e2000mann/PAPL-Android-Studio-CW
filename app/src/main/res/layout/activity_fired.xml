@@ -4,45 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Temp">
+    tools:context=".Fired">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/goodMorning"
+            android:id="@+id/firedMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginStart="174dp"
-            android:layout_marginLeft="174dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginEnd="178dp"
-            android:layout_marginRight="178dp"
+            android:text="You've been fired!" />
+
+        <TextView
+            android:id="@+id/firedReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="TextView" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/yesButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
-                android:text="Yes" />
+                android:text="Restart" />
 
             <Button
                 android:id="@+id/noButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="Quit" />
         </LinearLayout>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
