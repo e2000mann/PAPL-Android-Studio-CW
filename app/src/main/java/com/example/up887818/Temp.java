@@ -2,6 +2,7 @@ package com.example.up887818;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,9 +32,15 @@ public class Temp extends AppCompatActivity {
         //Working as of 07/11/19
         Integer[] hygieneOrder = new Integer[]{0, 1, 2, 3, 4};
         Collections.shuffle(Arrays.asList(hygieneOrder));
+        Class[] hygiene = new Class[]{HygieneActivity0.class,
+                HygieneActivity1.class, HygieneActivity2.class,
+                HygieneActivity3.class, HygieneActivity4.class};
 
         Integer[] customerOrder = new Integer[]{0, 1, 2, 3, 4};
         Collections.shuffle(Arrays.asList(customerOrder));
+        Class[] customer = new Class[]{CustomerActivity0.class,
+                CustomerActivity1.class, CustomerActivity2.class,
+                CustomerActivity3.class, CustomerActivity4.class};
 
         String introMessage;
 

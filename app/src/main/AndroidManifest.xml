@@ -9,8 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Fired"></activity>
-        <activity android:name=".Hygieneactivity0" />
+        <activity android:name=".CustomerActivity4"></activity>
+        <activity android:name=".CustomerActivity3" />
+        <activity android:name=".CustomerActivity2" />
+        <activity android:name=".CustomerActivity1" />
+        <activity android:name=".CustomerActivity0" />
+        <activity android:name=".HygieneActivity4" />
+        <activity android:name=".HygieneActivity2" />
+        <activity android:name=".HygieneActivity3" />
+        <activity android:name=".HygieneActivity1" />
+        <activity android:name=".Fired" />
+        <activity android:name=".HygieneActivity0" />
         <activity android:name=".Temp" />
         <activity
             android:name=".Introduction"

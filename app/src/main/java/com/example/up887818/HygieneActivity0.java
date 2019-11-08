@@ -6,30 +6,42 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Hygieneactivity0 extends AppCompatActivity {
+public class HygieneActivity0 extends AppCompatActivity {
 
-    ExtraMethods a = new ExtraMethods(Hygieneactivity0.this);
+    ExtraMethods a = new ExtraMethods(HygieneActivity0.this);
+
+    Boolean fatal = false;
+    Boolean finished = false;
+
+    Button yesButton = findViewById(R.id.yesButton);
+    Button noButton = findViewById(R.id.noButton);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hygieneactivity0);
 
-        Button yesButton = findViewById(R.id.yesButton);
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ;
+                if (finished){
+                    //move to next customer service activity
+                    ;
+                } else {
+                    fatal = true;
+                    finished = true;
+                    //In this instance both these variables will always be the same, however
+                    //This isn't always the case so I'm keeping them separate.
+                }
             }
         });
 
-        Button noButton = findViewById(R.id.noButton);
         noButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (fatal) {
                     //Get fired
-                    String reason = "Someone slipped and hurt themselves! You are a liability."
+                    String reason = "Someone slipped and hurt themselves! You are a liability.";
                     a.getFired(reason);
                 } else {
                     //Go back to previous activity
