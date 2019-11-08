@@ -2,7 +2,6 @@ package com.example.up887818;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +14,7 @@ public class Temp extends AppCompatActivity {
 
     //Todo: Activity closes immediately after loading. Error in code somewhere??
 
-    //Declaring this outside of the onCreate() method means I can access it in the onClick() method,
-    //Without needing to declare it final.
+    ExtraMethods a = new ExtraMethods(Temp.this);
 
 
     @Override
@@ -55,9 +53,8 @@ public class Temp extends AppCompatActivity {
             public void onClick(View v) {
                 refusals++;
                 if (refusals == 2){
-                    Intent fired = new Intent(Temp.this, Fired.class);
-                    fired.putExtra("reason", "You refused to show up to work twice!");
-                    startActivity(fired);
+                    String reason = "You refused to show up to work twice!";
+                    a.getFired(reason);
                 }
                 else{
                     TextView goodMorning = findViewById(R.id.textView2);
@@ -66,7 +63,7 @@ public class Temp extends AppCompatActivity {
             }
         });
 
-        for (int i=0; i==4; i++){
+        for (int i=0; i<5; i++){
             introMessage = String.format("Day %d! Good morning. Are you going to work today?",i++);
             goodMorning.setText(introMessage);
 
