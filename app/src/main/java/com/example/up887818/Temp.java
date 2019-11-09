@@ -1,8 +1,10 @@
 package com.example.up887818;
 
+import com.example.up887818.HygieneActivities.*;
+import com.example.up887818.ConsumerActivities.*;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,9 +24,10 @@ public class Temp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TextView goodMorning = findViewById(R.id.textView2);
+        TextView title = findViewById(R.id.title);
+        TextView description = findViewById(R.id.description);
 
-        setContentView(R.layout.activity_temp);
+        setContentView(R.layout.activity_decision);
 
         //Todo: Create All Task Activities
 
@@ -65,14 +68,14 @@ public class Temp extends AppCompatActivity {
                 }
                 else{
                     TextView goodMorning = findViewById(R.id.textView2);
-                    goodMorning.setText("Scott has requested that you go to work. If you refuse again you will be fired!");
+                    description.setText("Scott has requested that you go to work. If you refuse again you will be fired!");
                 }
             }
         });
 
         for (int i=0; i<5; i++){
-            introMessage = String.format("Day %d! Good morning. Are you going to work today?",i++);
-            goodMorning.setText(introMessage);
+            title.setText(String.format("Day %d!", i++));
+            description.setText("Good morning. Are you going to work today?");
 
             //Todo: (Ask Nad??) Wait until either button is pressed
         }

@@ -1,14 +1,16 @@
-package com.example.up887818;
+package com.example.up887818.ConsumerActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class HygieneActivity4 extends AppCompatActivity {
+import com.example.up887818.R;
+
+public class CustomerActivity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hygiene4);
+        setContentView(R.layout.activity_decision);
     }
 }

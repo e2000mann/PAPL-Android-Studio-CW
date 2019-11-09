@@ -1,10 +1,13 @@
-package com.example.up887818;
+package com.example.up887818.HygieneActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.up887818.ExtraMethods;
+import com.example.up887818.R;
 
 public class HygieneActivity0 extends AppCompatActivity {
 
@@ -19,7 +22,8 @@ public class HygieneActivity0 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hygieneactivity0);
+        setContentView(R.layout.activity_decision);
+
 
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
