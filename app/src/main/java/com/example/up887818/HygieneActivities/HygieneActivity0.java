@@ -11,7 +11,7 @@ import com.example.up887818.R;
 
 public class HygieneActivity0 extends AppCompatActivity {
 
-    ExtraMethods a = new ExtraMethods(HygieneActivity0.this);
+    ExtraMethods a = new ExtraMethods(this);
 
     Boolean fatal = false;
     Boolean finished = false;

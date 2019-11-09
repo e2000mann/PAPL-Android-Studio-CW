@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConsumerActivities.CustomerActivity4"></activity>
+        <activity android:name=".Finished"></activity>
+        <activity android:name=".ConsumerActivities.CustomerActivity4" />
         <activity android:name=".ConsumerActivities.CustomerActivity3" />
         <activity android:name=".ConsumerActivities.CustomerActivity2" />
         <activity android:name=".ConsumerActivities.CustomerActivity1" />

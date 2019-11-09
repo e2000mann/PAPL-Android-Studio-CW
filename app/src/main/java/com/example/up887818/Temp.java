@@ -17,17 +17,26 @@ public class Temp extends AppCompatActivity {
 
     //Todo: Activity closes immediately after loading. Error in code somewhere??
 
-    ExtraMethods a = new ExtraMethods(Temp.this);
+    ExtraMethods a = new ExtraMethods(this);
 
+    TextView title = findViewById(R.id.title);
+    TextView description = findViewById(R.id.description);
+
+    Button yesButton = findViewById(R.id.yesButton);
+    Button noButton = findViewById(R.id.noButton);
+
+    int day = 1;
+    int refusals = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TextView title = findViewById(R.id.title);
-        TextView description = findViewById(R.id.description);
-
         setContentView(R.layout.activity_decision);
+
+        //Set Text
+        title.setText(String.format("Day %d!", day));
+        description.setText("Good morning. Are you going to work today?");
 
         //Todo: Create All Task Activities
 
@@ -45,21 +54,18 @@ public class Temp extends AppCompatActivity {
                 CustomerActivity1.class, CustomerActivity2.class,
                 CustomerActivity3.class, CustomerActivity4.class};
 
-        String introMessage;
-
         //Setting up the response to the yes/no button.
-        Button yesButton = findViewById(R.id.yesButton);
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Todo: Once Activities set up, make so sends to next hygiene task.
-                ;
+                day++;
+                title.setText(String.format("Day %d!", day));
+                description.setText("Good morning. Are you going to work today?");
             }
         });
 
-        Button noButton = findViewById(R.id.noButton);
         noButton.setOnClickListener(new View.OnClickListener() {
-            int refusals = 0;
             public void onClick(View v) {
                 refusals++;
                 if (refusals == 2){
@@ -67,18 +73,10 @@ public class Temp extends AppCompatActivity {
                     a.getFired(reason);
                 }
                 else{
-                    TextView goodMorning = findViewById(R.id.textView2);
                     description.setText("Scott has requested that you go to work. If you refuse again you will be fired!");
                 }
             }
         });
-
-        for (int i=0; i<5; i++){
-            title.setText(String.format("Day %d!", i++));
-            description.setText("Good morning. Are you going to work today?");
-
-            //Todo: (Ask Nad??) Wait until either button is pressed
-        }
 
     }
 }
