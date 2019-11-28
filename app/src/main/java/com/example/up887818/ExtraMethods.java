@@ -11,9 +11,14 @@ public class ExtraMethods {
     private Activity activity;
     private Context context;
 
-    public ExtraMethods(Activity activity){
-        this.activity = activity;
-        this.context = activity.getApplicationContext();
+    public ExtraMethods(Activity a, Context c){
+        this.activity = a;
+        this.context = c;
+    }
+
+    public void setVariables(Activity a, Context c){
+        this.activity = a;
+        this.context = c;
     }
 
     public void getFired(String reason) {

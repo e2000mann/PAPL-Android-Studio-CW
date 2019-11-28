@@ -12,4 +12,9 @@
         <item>Each day you will take responsibility for the hygiene of the restaurant as well as serve customers.</item>
         <item>If you mess up, you may have to go back to your previous work... or worse, you could get fired!</item>
     </string-array>
+    <string-array name="hygieneactivity0">
+        <item>Scott has asked you to clean the kitchen floor. Will you do it?</item>
+        <item>You have cleaned the floor, but it is now wet. Do you bother drying the floor?</item>
+        <item>Someone slipped and hurt themselves on the wet floor! You are a liability for our restaurant.</item>
+    </string-array>
 </resources>

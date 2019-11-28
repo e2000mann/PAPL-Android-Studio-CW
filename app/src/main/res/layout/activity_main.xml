@@ -1,113 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <Space
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-87dp">
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteY="456dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:fontFamily="casual"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="346dp" />
 
-        <ImageView
-            android:id="@+id/Logo"
-            android:layout_width="203dp"
-            android:layout_height="210dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="104dp"
-            android:layout_marginEnd="104dp"
-            android:layout_weight="1"
-            android:contentDescription="Logo of game"
-            app:srcCompat="@drawable/logo" />
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="203dp"
+        android:layout_height="210dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:contentDescription="Logo of game"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="45dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/Author"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/app_name"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="391dp" />
 
-        <TextView
-            android:id="@+id/Title"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/title"
-            android:textStyle="bold"
-            app:fontFamily="casual" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.5" />
 
-        <TextView
-            android:id="@+id/Author"
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/app_name" />
+    <TextView
+        android:id="@+id/Intro"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/MainActivity_Intro"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="501dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
+    <EditText
+        android:id="@+id/nameBox"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="546dp" />
 
-        <TextView
-            android:id="@+id/Intro"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="101dp"
-            android:layout_marginEnd="101dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/MainActivity_Intro" />
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.5"
+        android:onClick="startGame"
+        android:padding="2sp"
+        android:paddingLeft="2sp"
+        android:paddingTop="2sp"
+        android:paddingRight="2sp"
+        android:paddingBottom="2sp"
+        android:text="Start"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="592dp"
+        tools:text="Start" />
 
-        <EditText
-            android:id="@+id/nameBox"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="96dp"
-            android:layout_marginEnd="102dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteY="686dp" />
 
-        <Button
-            android:id="@+id/startButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="162dp"
-            android:layout_marginEnd="161dp"
-            android:layout_weight="1"
-            android:onClick="startGame"
-            android:padding="25px"
-            android:paddingLeft="25px"
-            android:paddingTop="25px"
-            android:paddingRight="25px"
-            android:paddingBottom="25px"
-            android:text="Start"
-            tools:text="Start" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
