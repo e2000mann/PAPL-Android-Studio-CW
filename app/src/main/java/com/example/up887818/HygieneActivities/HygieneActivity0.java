@@ -26,8 +26,6 @@ public class HygieneActivity0 extends AppCompatActivity {
     Boolean finished = false;
     Boolean fatal = false;
 
-    String[] activityStrings = getResources().getStringArray(R.array.hygieneactivity0);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +40,8 @@ public class HygieneActivity0 extends AppCompatActivity {
 
         yesButton = findViewById(R.id.yesButton);
         noButton = findViewById(R.id.noButton);
+
+        String[] activityStrings = getResources().getStringArray(R.array.hygieneactivity0);
 
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,12 +69,9 @@ public class HygieneActivity0 extends AppCompatActivity {
             }
         });
 
-        test();
-    }
+        title.setText("Activity 1: Kitchen floor");
 
-    public void test(){
         bg.setBackgroundResource(R.drawable.kitchen_dirty);
-        title.setText("");
         description.setText(activityStrings[0]);
     }
 }
