@@ -22,11 +22,9 @@ public class Temp extends AppCompatActivity {
 
     ExtraMethods extra;
 
-    TextView title;
-    TextView description;
+    TextView title, description;
 
-    Button yesButton;
-    Button noButton;
+    Button yesButton, noButton;
 
     int day = 1;
     int refusals = 0;

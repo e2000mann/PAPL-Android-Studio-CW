@@ -17,14 +17,11 @@ public class HygieneActivity0 extends AppCompatActivity {
 
     FrameLayout bg;
 
-    TextView title;
-    TextView description;
+    TextView title, description;
 
-    Button yesButton;
-    Button noButton;
+    Button yesButton, noButton;
 
-    Boolean finished = false;
-    Boolean fatal = false;
+    Boolean finished, fatal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +43,8 @@ public class HygieneActivity0 extends AppCompatActivity {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (finished == false){
-                    fatal = true;
-                    finished = false;
-                    //In this instance both these variables will always be the same, however
-                    //This isn't always the case so I'm keeping them separate.
+                if (finished){
+                    finish();
                 }
             }
         });
@@ -70,6 +64,9 @@ public class HygieneActivity0 extends AppCompatActivity {
         });
 
         title.setText("Activity 1: Kitchen floor");
+
+        finished = false;
+        fatal = false;
 
         bg.setBackgroundResource(R.drawable.kitchen_dirty);
         description.setText(activityStrings[0]);
