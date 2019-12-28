@@ -2,6 +2,7 @@ package com.example.up887818.HygieneActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +39,8 @@ public class HygieneActivity0 extends AppCompatActivity {
         yesButton = findViewById(R.id.yesButton);
         noButton = findViewById(R.id.noButton);
 
+        //Todo: find way to link next customer activity into here
+
         String[] activityStrings = getResources().getStringArray(R.array.hygieneactivity0);
 
         yesButton.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +48,8 @@ public class HygieneActivity0 extends AppCompatActivity {
             public void onClick(View v) {
                 if (finished){
                     finish();
+
+                    //Intent i = new Intent(HygieneActivity0.this,
                 }
             }
         });

@@ -12,9 +12,50 @@
         <item>Each day you will take responsibility for the hygiene of the restaurant as well as serve customers.</item>
         <item>If you mess up, you may have to go back to your previous work... or worse, you could get fired!</item>
     </string-array>
+
+    <!-- Hygiene Activities -->
+    <!-- Activity 0: Cleaning the kitchen -->
     <string-array name="hygieneactivity0">
         <item>Scott has asked you to clean the kitchen floor. Will you do it?</item>
         <item>You have cleaned the floor, but it is now wet. Do you bother drying the floor?</item>
         <item>Someone slipped and hurt themselves on the wet floor! You are a liability for our restaurant.</item>
     </string-array>
+    <!-- Activity 1: Dropped burger -->
+    <string-array name="hygieneactivity1">
+        <item>Whilst cooking, you dropped a raw burger onto the floor. Do you pick it up?</item>
+        <item>Do you bin the burger or cook it?</item>
+        <item>The burger was contaminated from touching the floor and made someone sick! You are a liability for our restaurant.</item>
+    </string-array>
+    <!-- Activity 2: Cleaning the toilets -->
+    <string-array name="hygieneactivity2">
+        <item>It is your turn to clean the toilets. Do you refill the soap?</item>
+        <item>Now that there's soap, do you clean the toilets?</item>
+    </string-array>
+    <!--Activity 3: Emptying the bins -->
+    <string-array name="hygieneactivity3">
+        <item>The bins are getting full. Do you empty them?</item>
+    </string-array>
+    <!--Activity 4: ?? -->
+    <string-array name="hygieneactivity4"></string-array>
+    <!--Todo: create hygiene activity 4 -->
+
+    <!-- Customer Service Activities -->
+    <!-- Activity 0: Unintelligible customer -->
+    <string-array name="customeractivity0">
+        <item>You are running the drive thru and the customer is difficult to hear. Do you ask them to repeat themselves?</item>
+        <item>You misheard the customer and now the order is wrong. Are you going to fix it?</item>
+    </string-array>
+    <!-- Activity 1: Large order -->
+    <string-array name="customeractivity1">
+        <item>A large order comes in the drive thru. Are you going to ask them to park up and wait?</item>
+    </string-array>
+    <!-- Activity 2: ?? -->
+    <string-array name="customeractivity2"></string-array>
+    <!-- Activity 3: ?? -->
+    <string-array name="customeractivity3"></string-array>
+    <!-- Activity 4: ?? -->
+    <string-array name="customeractivity4"></string-array>
+    <!-- Todo: create customer activities 2 to 4 -->
+
+    <!-- Todo: update lucidchart with new activities -->
 </resources>

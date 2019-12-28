@@ -47,7 +47,7 @@ public class Temp extends AppCompatActivity {
         title.setText(String.format("Day %d!", day));
         description.setText("Good morning. Are you going to work today?");
 
-        //Todo: Create All Task Activities
+        //Todo: Create All Task Activities (values > strings.xml)
 
         //This shuffles the order in which hygiene/customer tasks are given out.
         //Working as of 07/11/19
@@ -69,6 +69,7 @@ public class Temp extends AppCompatActivity {
             public void onClick(View v) {
                 //Todo: Once Activities set up, make so sends to next hygiene task.
                 Intent i = new Intent(Temp.this, HygieneActivity0.class);
+                //i.putExtra(customer[day])
                 startActivity(i);
 
                 day++;
