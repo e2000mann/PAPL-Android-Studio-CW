@@ -21,7 +21,9 @@ public class HygieneActivity1 extends AppCompatActivity {
 
     Button yesButton, noButton;
 
-    Boolean finished, fatal;
+    int decision = 0;
+
+    String[] activityStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +42,17 @@ public class HygieneActivity1 extends AppCompatActivity {
 
         //Todo: find way to link next customer activity into here
 
-        String[] activityStrings = getResources().getStringArray(R.array.hygieneactivity1);
+        activityStrings = getResources().getStringArray(R.array.hygieneactivity1);
 
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (finished){
+                if (decision == 0) {
+                    decision += 1;
+                    description.setText(activityStrings[1]);
+                    bg.setBackgroundResource(R.drawable.grill);
+                } else {
                     finish();
-
-                    //Intent i = new Intent(HygieneActivity0.this,
                 }
             }
         });
@@ -56,23 +60,18 @@ public class HygieneActivity1 extends AppCompatActivity {
         noButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (fatal) {
-                    //Get fired
-                    String reason = "Someone slipped and hurt themselves! You are a liability.";
-                    extra.getFired(reason);
-                } else {
-                    //Go back to previous activity
+                if (decision == 0){
                     finish();
+                } else {
+                    String reason = activityStrings[2];
+                    extra.getFired(reason);
                 }
             }
         });
 
         title.setText("Activity 1: Kitchen floor");
 
-        finished = false;
-        fatal = false;
-
-        bg.setBackgroundResource(R.drawable.kitchen_dirty);
+        bg.setBackgroundResource(R.drawable.dropped_burger);
         description.setText(activityStrings[0]);
     }
 }

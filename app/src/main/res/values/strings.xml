@@ -29,7 +29,7 @@
     <!-- Activity 2: Cleaning the toilets -->
     <string-array name="hygieneactivity2">
         <item>It is your turn to clean the toilets. Do you refill the soap?</item>
-        <item>Now that there's soap, do you clean the toilets?</item>
+        <item>Now that there\'s soap, do you clean the toilets?</item>
     </string-array>
     <!--Activity 3: Emptying the bins -->
     <string-array name="hygieneactivity3">
@@ -49,13 +49,19 @@
     <string-array name="customeractivity1">
         <item>A large order comes in the drive thru. Are you going to ask them to park up and wait?</item>
     </string-array>
-    <!-- Activity 2: ?? -->
-    <string-array name="customeractivity2"></string-array>
-    <!-- Activity 3: ?? -->
-    <string-array name="customeractivity3"></string-array>
+    <!-- Activity 2: Ketchup Packets -->
+    <string-array name="customeractivity2">
+        <item>A customer asks for extra ketchup when it usually costs money. Do you give it to them for free?</item>
+    </string-array>
+    <!-- Activity 3: Declined Payment -->
+    <string-array name="customeractivity3">
+        <item>The customer\'s card gets declined. Do you let them try again?</item>
+        <item>It declines for a second time. Do you give them free food out of pity?</item>
+        <item>You did not ask for the manager\'s permission before giving the free food.</item>
+    </string-array>
     <!-- Activity 4: ?? -->
     <string-array name="customeractivity4"></string-array>
-    <!-- Todo: create customer activities 2 to 4 -->
+    <!-- Todo: create customer activities 4 -->
 
     <!-- Todo: update lucidchart with new activities -->
 </resources>

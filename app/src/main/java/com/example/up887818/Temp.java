@@ -26,7 +26,7 @@ public class Temp extends AppCompatActivity {
 
     Button yesButton, noButton;
 
-    int day = 1;
+    int day = 0;
     int refusals = 0;
 
     @Override
@@ -34,6 +34,8 @@ public class Temp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_decision);
+
+        day++;
 
         extra = new ExtraMethods(this, Temp.this);
 
@@ -51,17 +53,17 @@ public class Temp extends AppCompatActivity {
 
         //This shuffles the order in which hygiene/customer tasks are given out.
         //Working as of 07/11/19
-//        Integer[] hygieneOrder = new Integer[]{0, 1, 2, 3, 4};
-//        Collections.shuffle(Arrays.asList(hygieneOrder));
-//        Class[] hygiene = new Class[]{HygieneActivity0.class,
-//                HygieneActivity1.class, HygieneActivity2.class,
-//                HygieneActivity3.class, HygieneActivity4.class};
-//
-//        Integer[] customerOrder = new Integer[]{0, 1, 2, 3, 4};
-//        Collections.shuffle(Arrays.asList(customerOrder));
-//        Class[] customer = new Class[]{CustomerActivity0.class,
-//                CustomerActivity1.class, CustomerActivity2.class,
-//                CustomerActivity3.class, CustomerActivity4.class};
+        Integer[] hygieneOrder = new Integer[]{0, 1, 2, 3, 4};
+        Collections.shuffle(Arrays.asList(hygieneOrder));
+        Class[] hygiene = new Class[]{HygieneActivity0.class,
+                HygieneActivity1.class, HygieneActivity2.class,
+                HygieneActivity3.class, HygieneActivity4.class};
+
+        Integer[] customerOrder = new Integer[]{0, 1, 2, 3, 4};
+        Collections.shuffle(Arrays.asList(customerOrder));
+        Class[] customer = new Class[]{CustomerActivity0.class,
+                CustomerActivity1.class, CustomerActivity2.class,
+                CustomerActivity3.class, CustomerActivity4.class};
 
         //Setting up the response to the yes/no button.
         yesButton.setOnClickListener(new View.OnClickListener() {
@@ -69,10 +71,9 @@ public class Temp extends AppCompatActivity {
             public void onClick(View v) {
                 //Todo: Once Activities set up, make so sends to next hygiene task.
                 Intent i = new Intent(Temp.this, HygieneActivity0.class);
-                //i.putExtra(customer[day])
+                i.putExtra(customer[day])
                 startActivity(i);
 
-                day++;
                 title.setText(String.format("Day %d!", day));
                 description.setText("Good morning. Are you going to work today?");
             }
